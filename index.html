@@ -87,6 +87,38 @@
                     </div>
                 </div>
             </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6" style="font-size: 2em;">
+                    <h5>Example with half stars</h5>
+                    <div id="halfstarsReview"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="halfstarsInput">Stars</label>
+                    <input type="text" readonly id="halfstarsInput" class="form-control form-control-sm">
+                    <div class="alert alert-primary mt-2">
+                        Look in the developer console to see the event callback.
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6" style="font-size: 2em;">
+                    <h5>Example with all options changed to something unrealistic</h5>
+                    <div id="unrealisticReview"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="unrealisticInput">Stars</label>
+                    <input type="text" readonly id="unrealisticInput" class="form-control form-control-sm">
+                    <div class="alert alert-primary mt-2">
+                        Look in the developer console to see the event callback.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -114,6 +146,27 @@
         "click": function (e) {
             console.log(e);
             $("#customstarsInput").val(e.stars);
+        }
+    });
+
+    $("#halfstarsReview").rating({
+        "half": true,
+        "click": function (e) {
+            console.log(e);
+            $("#halfstarsInput").val(e.stars);
+        }
+    });
+
+    $("#unrealisticReview").rating({
+        stars: 7,
+        emptyStar: "far fa-arrow-alt-circle-left",
+        halfStar: "far fa-angry",
+        filledStar: "fas fa-arrow-alt-circle-right",
+        color: "#ff3ef9",
+        half: true,
+        click: function (e) {
+            console.log(e);
+            $("#unrealisticInput").val(e.stars);
         }
     });
 </script>

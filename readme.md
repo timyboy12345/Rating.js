@@ -37,12 +37,19 @@ The following options are available:
 |-------------- |---------------|--------------|-----------------------|
 | stars         | integer       | 5 | The amount of stars to add to the rating |
 | emptyStar     | string        | far fa-star | The classes an empty star should have |
+| halfStar      | string        | fas fa-star-half-alt | The classes a half-filled star should have |
 | filledStar    | string        | fas fa-star | The classes a filled star should have |
 | color         | hex color     | #fcd703 | The color the stars should have |
+| half          | boolean       | false | If you want to allow for half-starred reviews to be accepted. |
 | click         | callback function | `function(e) {};` | The function that is called when a review is submitted/clicked. |
 
 ## Requirements
-This package uses JQuery to select items, and to easily add ratings to any field. 
+This package uses JQuery to select items, and to easily add ratings to any field.
+
+## Half stars
+This package also allows for half stars, if you set the `half` option to `true` in your options, users will be able to submit half stars. You can also change which icon you want to use for the half stars, just like with the other icons, by adding it to the options with key `halfStar`. This option defaults to the fontawesome icon `fas fa-star-half-alt`
+
+To make sure half stars are the same with as their fullsize option, the width of the element is changed when a user hovers over the element for the first time. This means that when user resizes their screen, icons may overlap. To disable this functionality
 
 ## Developing
 This package uses webpack to package the rating.js file. To customize this package, run the following commands:
