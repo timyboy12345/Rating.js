@@ -1,8 +1,17 @@
-# Rating.js
+# ⭐ Rating.js ⭐
 With this package, you will be able to add a star-based (or anything icon you wish) rating system to your site. It's easy to understand, and fully customizable.
 
 ## Examples
 To see some examples, head over to [the Rating.js github pages](https://timyboy12345.github.io/Rating.js/)
+
+## Recommendations
+To make the most out of the rating-experience, please follow these tips:
+1. Use large, simple icons - This way, the icons also show nicely on mobile devices.
+2. Test the review page on all screen sizes - To make sure the page displays the same on mobile as it does on your desktop, make sure to check the page with different page sizes.
+3. Use a color that users will be able to see - Use a color that stands out from the background, so users can clearly see the review box.
+4. Explain the stars! Tell your users what 1 star means, and what 5 stars mean. This way, they don't accidentally submit a score they don't mean to submit.
+5. Show the score they clicked - Show an input box/something visable to show users what amount of stars they are submitting. This way, they don't accidentally submit something to low or too high.
+6. Always check the score in your backend! Make sure to validate the score is a number, before doing anything with it, like saving the score to a database. Also make sure the score is between the minimum and maximum score. Since this is just a frontend package, users will be able to submit something elses like SQL queries or HTML script tags with malicious code.
 
 ## Using this package
 The rating.js file is very easy to use, and can run with just a few lines of code. For examples, you can look in the `examples`  folder.
