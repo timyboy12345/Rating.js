@@ -1,0 +1,27 @@
+{
+  "name": "rating",
+  "version": "1.0.0",
+  "description": "A rating plugin for JQuery and FontAwesome to submit stars",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack-cli": "^3.3.10",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prod": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timyboy12345/rating.git"
+  },
+  "author": "Tim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timyboy12345/rating/issues"
+  },
+  "homepage": "https://github.com/timyboy12345/rating#readme"
+}
