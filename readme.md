@@ -1,6 +1,9 @@
 # Rating.js
 With this package, you will be able to add a star-based (or anything icon you wish) rating system to your site. It's easy to understand, and fully customizable.
 
+## Examples
+To see some examples, head over to [the Rating.js github pages](https://timyboy12345.github.io/Rating.js/)
+
 ## Using this package
 The rating.js file is very easy to use, and can run with just a few lines of code. For examples, you can look in the `examples`  folder.
 

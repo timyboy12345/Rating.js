@@ -24,18 +24,68 @@
 <main class="container mt-4">
     <div class="row">
         <div class="col-12">
-            <h1>Review</h1>
+            <h1>Review.js</h1>
+
+            <p>
+                This is the examples page for Review.js. Look at the examples below to get an idea of what this module
+                is capable of.
+            </p>
+            <p>
+                These examples use <a href="https://fontawesome.com" target="_blank">Font Awesome</a> for the icons, but
+                you're free to use any icon you wish.
+            </p>
+            <p class="text-primary">
+                You can look at the source code in the developer console to view the code used to create these examples.
+            </p>
         </div>
 
-        <div class="col-12 col-md-6" style="font-size: 2em;">
-            <div id="review"></div>
-        </div>
+        <div class="col-12">
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6" style="font-size: 2em;">
+                    <h5>Normal example</h5>
+                    <div id="review"></div>
+                </div>
 
-        <div class="col-12 col-md-6">
-            <label for="starsInput">Stars</label>
-            <input type="text" readonly id="starsInput" class="form-control form-control-sm">
-            <div class="alert alert-primary mt-2">
-                Look in the developer console to see the event callback.
+                <div class="col-12 col-md-6">
+                    <label for="starsInput">Stars</label>
+                    <input type="text" readonly id="starsInput" class="form-control form-control-sm">
+                    <div class="alert alert-primary mt-2">
+                        Look in the developer console to see the event callback.
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6" style="font-size: 2em;">
+                    <h5>Example with 10 stars</h5>
+                    <div id="10starsReview"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="10starsInput">Stars</label>
+                    <input type="text" readonly id="10starsInput" class="form-control form-control-sm">
+                    <div class="alert alert-primary mt-2">
+                        Look in the developer console to see the event callback.
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6" style="font-size: 2em;">
+                    <h5>Example with custom icons</h5>
+                    <div id="customstarsReview"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="customstarsInput">Stars</label>
+                    <input type="text" readonly id="customstarsInput" class="form-control form-control-sm">
+                    <div class="alert alert-primary mt-2">
+                        Look in the developer console to see the event callback.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -43,11 +93,29 @@
 
 <script>
     $("#review").rating({
-        "click": function(e) {
+        "click": function (e) {
             console.log(e);
             $("#starsInput").val(e.stars);
         }
-    })
+    });
+
+    $("#10starsReview").rating({
+        "stars": 10,
+        "click": function (e) {
+            console.log(e);
+            $("#10starsInput").val(e.stars);
+        }
+    });
+
+    $("#customstarsReview").rating({
+        "emptyStar": "far fa-play-circle",
+        "filledStar": "fas fa-play-circle",
+        "color": "#4c71ff",
+        "click": function (e) {
+            console.log(e);
+            $("#customstarsInput").val(e.stars);
+        }
+    });
 </script>
 </body>
 </html>
