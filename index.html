@@ -125,6 +125,7 @@
 
 <script>
     $("#review").rating({
+        "value": 2,
         "click": function (e) {
             console.log(e);
             $("#starsInput").val(e.stars);
@@ -158,6 +159,7 @@
     });
 
     $("#unrealisticReview").rating({
+        value: 3,
         stars: 7,
         emptyStar: "far fa-arrow-alt-circle-left",
         halfStar: "far fa-angry",

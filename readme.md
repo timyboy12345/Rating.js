@@ -35,6 +35,7 @@ The following options are available:
 
 | Option        | Type          | Default      | Explanation           |
 |-------------- |---------------|--------------|-----------------------|
+| value         | integer       | 0 | The amount of stars to begin with |
 | stars         | integer       | 5 | The amount of stars to add to the rating |
 | emptyStar     | string        | far fa-star | The classes an empty star should have |
 | halfStar      | string        | fas fa-star-half-alt | The classes a half-filled star should have |
@@ -43,8 +44,20 @@ The following options are available:
 | half          | boolean       | false | If you want to allow for half-starred reviews to be accepted. |
 | click         | callback function | `function(e) {};` | The function that is called when a review is submitted/clicked. |
 
+### Some more explanations
+#### value
+The value option is the amount of stars the module begins with, so if this value is set to 3, the first 3 stars are already colored. If half stars are enabled, it's also possible to fill in decimals here, like `1.5` and `3.5`.
+
+#### half
+If `half` is set to true, it's possible to enter numbers like `2.5` and `4.5`, instead of only `2` and `4`. This way, the reviews can be more precise. The icon to use for half stars is set under the `halfStar` option.
+
+#### click
+The `click` option should have the callback function that is called when a user clicks on the review. 
+
 ## Requirements
 This package uses JQuery to select items, and to easily add ratings to any field.
+
+If you wish to develop with this package, you also need to download all packages with `npm i`, which requires the NPM package manager.
 
 ## Half stars
 This package also allows for half stars, if you set the `half` option to `true` in your options, users will be able to submit half stars. You can also change which icon you want to use for the half stars, just like with the other icons, by adding it to the options with key `halfStar`. This option defaults to the fontawesome icon `fas fa-star-half-alt`
