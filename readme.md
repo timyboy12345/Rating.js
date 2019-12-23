@@ -32,6 +32,9 @@ $("#review").rating({
 
 You can add stars to any element with the following JQuery extension: `$('#div').rating({})` 
 
+## Data attributes
+It's also possible to use data-attributes to show the amount of stars, without writing any extra javascript. These data-attributes always use the syntax `data-rating-[option]` and an element always has to have the attribute `data-rating-stars` to indicate that element is a rating block. To indicate an input element is connected with the review section, use the `data-rating-input` attribute with a css selector to indicate which element has to have the value changed. To see this in an example, go to the [example page](https://timyboy12345.github.io/Rating.js/#dataReview). 
+
 ## Options
 To customize the package, you can add options to your `.rating()` call in JSON format, like so:
 ```
@@ -52,6 +55,7 @@ The following options are available:
 | color         | hex color     | #fcd703 | The color the stars should have |
 | half          | boolean       | false | If you want to allow for half-starred reviews to be accepted. |
 | click         | callback function | `function(e) {};` | The function that is called when a review is submitted/clicked. |
+| readonly      | boolean       | false | Indicates if these stars can be interacted with or not. |
 
 ### Some more explanations
 #### value
@@ -61,7 +65,10 @@ The value option is the amount of stars the module begins with, so if this value
 If `half` is set to true, it's possible to enter numbers like `2.5` and `4.5`, instead of only `2` and `4`. This way, the reviews can be more precise. The icon to use for half stars is set under the `halfStar` option.
 
 #### click
-The `click` option should have the callback function that is called when a user clicks on the review. 
+The `click` option is the callback function that is called when a user clicks on the review. If this value is not set, an error will be thrown to the console to indicate no valid callback function has been added.
+
+#### readonly
+The `readonly` option is used to indicate whether a review section can be interacted with or not. If set to false, the stars can not be clicked, but if a valid `value` option has been set, this will be used to fill in the correct amount of stars.
 
 ## Requirements
 This package uses JQuery to select items, and to easily add ratings to any field.
