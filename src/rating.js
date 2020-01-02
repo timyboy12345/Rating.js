@@ -15,6 +15,10 @@ const defaults = {
 jQuery.fn.extend({
     rating: function (options = {}) {
         return this.each(function () {
+            if ($(this).attr("rating")) {
+                $(this).empty();
+            }
+
             this.stars = options.value ? options.value : defaults.value;
             this.readonly = options.readonly ? options.readonly : defaults.readonly;
 
@@ -24,7 +28,8 @@ jQuery.fn.extend({
 
             $(this).css({
                 "color": options.color ? options.color : defaults.color
-            });
+            })
+                .attr("rating", true);
 
             if (!this.readonly) {
                 $(this).on('mousemove', function (e) {
