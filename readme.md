@@ -80,6 +80,9 @@ This package also allows for half stars, if you set the `half` option to `true` 
 
 To make sure half stars are the same with as their fullsize option, the width of the element is changed when a user hovers over the element for the first time. This means that when user resizes their screen, icons may overlap. To disable this functionality
 
+## Altering the rating element
+When creating a rating element, this package will set a `rating` attribute to true on the selected element. This way, you can easily detect all rating elements in your webpage. If you want to update a rating element, you can re-call the `.rating()` function. This will remove all existing stars, and re-draw the rating element. You will need to add all options to the `.rating()` method, otherwise, the default options will be used.
+
 ## Developing
 This package uses webpack to package the rating.js file. To customize this package, run the following commands:
 
