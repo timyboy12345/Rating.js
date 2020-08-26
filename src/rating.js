@@ -32,7 +32,7 @@ jQuery.fn.extend({
                 .attr("rating", true);
 
             if (!this.readonly) {
-                $(this).on('mousemove', function (e) {
+                $(this).off('mousemove').on('mousemove', function (e) {
                     let halfStars = options.half ? options.half : defaults.half;
 
                     if (this.getStars().index(e.target) >= 0) {
@@ -68,11 +68,11 @@ jQuery.fn.extend({
                     }
                 });
 
-                $(this).on('mouseout', function (e) {
+                $(this).off('mouseout').on('mouseout', function (e) {
                     this.printStars();
                 });
 
-                $(this).on('click', function (e) {
+                $(this).off('click').on('click', function (e) {
                     let halfStars = options.half ? options.half : defaults.half;
                     if (!halfStars) {
                         this.stars = this.getStars().index(e.target) + 1;
