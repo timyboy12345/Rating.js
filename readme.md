@@ -36,7 +36,7 @@ You can add stars to any element with the following JQuery extension: `$('#div')
 It's also possible to use data-attributes to show the amount of stars, without writing any extra javascript. These data-attributes always use the syntax `data-rating-[option]` and an element always has to have the attribute `data-rating-stars` to indicate that element is a rating block. To indicate an input element is connected with the review section, use the `data-rating-input` attribute with a css selector to indicate which element has to have the value changed. To see this in an example, go to the [example page](https://timyboy12345.github.io/Rating.js/#dataReview). 
 
 ## Options
-To customize the package, you can add options to your `.rating()` call in JSON format, like so:
+To customize the rating field, you can add options to the `.rating()` call in JSON format, like so:
 ```
 $("#div").rating({
     option: value

@@ -4,8 +4,8 @@
   "description": "A rating plugin for JQuery and FontAwesome to submit stars",
   "main": "webpack.config.js",
   "dependencies": {
-    "webpack-cli": "^3.3.10",
-    "webpack": "^4.41.2"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {},
   "scripts": {
